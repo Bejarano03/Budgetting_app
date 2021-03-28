@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGOD_URI || "mongodb://localhost/budgetapp", {
+mongoose.connect(process.env.MONGOD_URI || "mongodb+srv://new-user:Password12@cluster0.z4zua.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
