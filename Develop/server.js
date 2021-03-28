@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://new-user:fRwuD8VHjnXiZ2xa@cluster0.z4zua.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGOD_URI || "mongodb://localhost/budgetapp", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
